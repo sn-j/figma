@@ -4,19 +4,29 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Rubik', sans-serif;
+}
+
 header {
-  padding: 10px 5rem;
+  padding: 50px 5rem;
+}
+
+header .menu {
+  visibility: hidden;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
 }
 
 .logo {
   display: flex;
-  gap: 1px;
+  gap: 1rem;
   align-items: center;
   width: 8%;
 }
@@ -37,6 +47,7 @@ nav {
 
 ul li {
   list-style: none;
+  cursor: pointer;
 }
 
 .btn {
@@ -44,6 +55,7 @@ ul li {
   align-items: center;
   justify-content: space-between;
   width: 14%;
+  cursor: pointer;
 
 }
 
@@ -61,6 +73,7 @@ ul li {
   color: #F53855;
   border: 1px solid #F53855;
   background: transparent;
+
 }
 
 section {
@@ -70,39 +83,30 @@ section {
 
 .banner {
   display: flex;
-  gap: 20%;
+
 }
 
-.image {
-  flex-basis: 41%;
+.info h3 {
+  color: #0B132A;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 70px;
 }
 
-.image img {
-  border-radius: 10px;
-  width: 80%;
-}
-
-.banner .image img {
-  width: 66%;
-}
-
-.info {
-  flex-basis: 40%;
-}
-
-.info h2 {
-  font-size: 2rem;
-  margin: 20px 0px;
-  line-height: 2.5rem;
+.info-span {
+  font-weight: 700;
 }
 
 .info p {
-  line-height: 1.7rem;
+  line-height: 30px;
+  margin: 20px 0px 0px 0px;
+  font-weight: 400px;
 }
 
 .info button {
-  width: 40%;
-  padding: 15px;
+  width: 250px;
+  height: 60px;
   background-color: #F53855;
   color: white;
   font-weight: bold;
@@ -110,8 +114,9 @@ section {
   border: #F53855;
   outline: none;
   margin-top: 10%;
-  box-shadow: 0px 11px 6px -4px #F53855;
+  box-shadow: 0px 11px 2px rgba(245, 56, 56, 0.35);
 }
+
 
 .details {
   display: grid;
@@ -216,8 +221,17 @@ section {
   margin-bottom: 15px;
 }
 
-.features img {
-  height: 414px;
+.features-list img {
+  width: 5%;
+  margin-top: 0px;
+}
+
+.list-items {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  line-height: 2rem;
+
 }
 
 .features-list {
@@ -246,6 +260,7 @@ section {
 .plan-details h2 {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .plan-details p {
@@ -264,8 +279,13 @@ section {
 .plan h4 {
   text-align: center;
   margin: 20px 0px;
+}
 
-
+.free img,
+.standard img,
+.premium img {
+  display: block;
+  margin: 5px auto;
 }
 
 .plan p {
@@ -274,33 +294,15 @@ section {
   text-align: start;
 }
 
-.free {
-  border: 2px solid gray;
-  padding: 15px;
-}
 
-.standard {
-  border: 2px solid gray;
-  padding: 15px;
-}
-
+.free,
+.standard,
 .premium {
-  border: 2px solid gray;
-  padding: 15px;
+  border: 2px solid #DDDDDD;
+  border-radius: 10px;
 }
 
-.plan .free img {
-  width: 100%;
 
-}
-
-.standard img {
-  width: 100%;
-}
-
-.premium img {
-  width: 100%;
-}
 
 .plan-bottom {
   display: flex;
@@ -316,24 +318,90 @@ section {
 
 .plan-btn button {
   padding: 10px 40px;
-  border-radius: 20px;
+  border-radius: 50px;
   color: #F53855;
-  border: 1px solid #F53855;
+  border: 2px solid #F53855;
   background: transparent;
+  cursor: pointer;
+
 }
 
 .plan-month {
   color: #878484;
 }
 
-/* 
-.free .plan-bottom {
-  margin-top: 65px;
+.network-details {
+  width: 100%;
+  margin: 15px auto;
 }
 
-.plan-bottom .plan-btn {
-  margin-left: 40%;
-  margin-top: 20px;
+.network-details h3 {
+  color: #0B132A;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  width: 383px;
+  margin: auto;
 }
 
-*/
+.network-details p {
+  width: 555px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #4F5665;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 140px;
+}
+
+.brand-name {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-bottom: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.about-costumer {
+  width: 100%;
+
+}
+
+.about-costumer h3 {
+  color: #0B132A;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  width: 447px;
+  margin: auto;
+}
+
+.about-costumer p {
+  width: 555px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #4F5665;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .menu {
+    visibility: visible;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
